@@ -2,212 +2,112 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Course Homepage</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Topics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet" />
+    <link id="theme" rel="stylesheet" href="light.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
     <header class="header">
-        <div class="header-content">
-            <h1>Web Topics</h1>
-            <div class="header-buttons">
-                <button id="dark-mode-toggle" class="header-btn">
-                    <ion-icon name="moon" class="icon"></ion-icon> <span>Dark Mode</span>
+        <section class="navbar">
+            <a href="/">
+                <h3>Web Topics</h3>
+            </a>
+            <nav>
+                <button class="dark">
+                    <p>
+                        <ion-icon name="moon-outline"></ion-icon><span>Dark Mode</span>
+                    </p>
                 </button>
-                <button id="favourites-btn" class="header-btn">
-                    <ion-icon name="heart" class="icon"></ion-icon> <span>Favourites</span>
+                <button class="fav">
+                    <p>
+                        <ion-icon name="heart-outline"></ion-icon><span>Favourites</span>
+                    </p>
                 </button>
-            </div>
-        </div>
+            </nav>
+        </section>
     </header>
-    <div class="welcome-section">
-        <div class="empty">
-            <div class="left-tri"></div>
-            <div class="right-tri"></div>
-        </div>
-        <h2>Welcome to our website!</h2>
-        <p>We have a new design that's fresh, modern, and easy to use.</p>
-    </div>
-
-    <main class="course-list">
-        <div class="search-container">
-            <div class="search-bar">
-                <ion-icon name="search" class="search-icon"></ion-icon>
-                <input type="text" class="search-input" placeholder="Search the website...">
+    <main>
+        <section class="welcoming-section">
+            <div class="empty">
+                <div class="left-tri"></div>
+                <div class="right-tri"></div>
             </div>
-            <div class="seach-buttons">
-                <select class="sort-dropdown">
-                    <option value="default">Sort by: Default</option>
-                    <option value="popularity">Popularity</option>
-                    <option value="rating">Rating</option>
-                    <option value="newest">Newest</option>
-                </select>
-                <select class="filter-dropdown">
-                    <option value="default">Filter by: Default</option>
-                    <option value="category1">Category 1</option>
-                    <option value="category2">Category 2</option>
-                    <option value="category3">Category 3</option>
-                </select>
-            </div>
-        </div>
-        <h1>"39" Topics Found!</h1>
-        <div class="cards">
-            <div class="course-card">
-                <img src="./Assests/Logos/html.png" alt="Course Image">
-                <h2>Course Name</h2>
-                <span class="subject">Node.js</span>
-                <div class="rating">
-                    ★★★★☆
+            <section class="welcoming">
+                <div>
+                    <h2>Welcome to our website!</h2>
+                    <p class="welP">
+                        We have a new design that's fresh, modern, and easy to use
+                    </p>
                 </div>
-                <p class="author">Author: Adam Jones</p>
-            </div>
-
-            <div class="course-card">
-                <img src="https://via.placeholder.com/300x200" alt="Course Image">
-                <h2>Course 2</h2>
-                <span class="subject">React.js</span>
-                <div class="rating">
-                    ★★★★★
+            </section>
+        </section>
+        <article class="search">
+            <div class="search-section">
+                <div class="searchBar">
+                    <p><ion-icon name="search-outline"></ion-icon></p>
+                    <input type="search" name="search" id="search" placeholder="Search the website..." />
                 </div>
-                <p class="author">Author: Jane Doe</p>
-            </div>
+                <div class="selectors">
+                    <div class="sort">
+                        <label for="sort">Sort by:</label>
+                        <select id="sort">
+                            <option value="">Default</option>
+                            <option value="topic">Topic</option>
+                            <option value="name">Author</option>
+                        </select>
+                    </div>
 
-            <div class="course-card">
-                <img src="https://via.placeholder.com/300x200" alt="Course Image">
-                <h2>Course Name</h2>
-                <span class="subject">Node.js</span>
-                <div class="rating">
-                    ★★★★☆
+                    <div class="filter">
+                        <label for="filter">Filter by:</label>
+                        <select id="filter">
+                            <option value="">Default</option>
+                            <option value="Web Development Languages">Languages</option>
+                            <option value="Frontend Frameworks and Libraries">
+                                Frontend
+                            </option>
+                            <option value="Backend Frameworks and Libraries">
+                                Backend
+                            </option>
+                            <option value="Databases and APIs">Databases and APIs</option>
+                            <option value="Web Development Concepts and Technologies">
+                                Web Development Concepts and Technologies
+                            </option>
+                        </select>
+                    </div>
                 </div>
-                <p class="author">Author: Adam Jones</p>
             </div>
-
-            <div class="course-card">
-                <img src="https://via.placeholder.com/300x200" alt="Course Image">
-                <h2>Course 2</h2>
-                <span class="subject">React.js</span>
-                <div class="rating">
-                    ★★★★★
-                </div>
-                <p class="author">Author: Jane Doe</p>
-            </div>
-
-            <div class="course-card">
-                <img src="https://via.placeholder.com/300x200" alt="Course Image">
-                <h2>Course Name</h2>
-                <span class="subject">Node.js</span>
-                <div class="rating">
-                    ★★★★☆
-                </div>
-                <p class="author">Author: Adam Jones</p>
-            </div>
-
-            <div class="course-card">
-                <img src="https://via.placeholder.com/300x200" alt="Course Image">
-                <h2>Course 2</h2>
-                <span class="subject">React.js</span>
-                <div class="rating">
-                    ★★★★★
-                </div>
-                <p class="author">Author: Jane Doe</p>
-            </div>
-
-            <div class="course-card">
-                <img src="https://via.placeholder.com/300x200" alt="Course Image">
-                <h2>Course Name</h2>
-                <span class="subject">Node.js</span>
-                <div class="rating">
-                    ★★★★☆
-                </div>
-                <p class="author">Author: Adam Jones</p>
-            </div>
-
-            <div class="course-card">
-                <img src="https://via.placeholder.com/300x200" alt="Course Image">
-                <h2>Course 2</h2>
-                <span class="subject">React.js</span>
-                <div class="rating">
-                    ★★★★★
-                </div>
-                <p class="author">Author: Jane Doe</p>
-            </div>
-
-            <div class="course-card">
-                <img src="https://via.placeholder.com/300x200" alt="Course Image">
-                <h2>Course Name</h2>
-                <span class="subject">Node.js</span>
-                <div class="rating">
-                    ★★★★☆
-                </div>
-                <p class="author">Author: Adam Jones</p>
-            </div>
-
-            <div class="course-card">
-                <img src="https://via.placeholder.com/300x200" alt="Course Image">
-                <h2>Course 2</h2>
-                <span class="subject">React.js</span>
-                <div class="rating">
-                    ★★★★★
-                </div>
-                <p class="author">Author: Jane Doe</p>
-            </div>
-
-            <div class="course-card">
-                <img src="https://via.placeholder.com/300x200" alt="Course Image">
-                <h2>Course Name</h2>
-                <span class="subject">Node.js</span>
-                <div class="rating">
-                    ★★★★☆
-                </div>
-                <p class="author">Author: Adam Jones</p>
-            </div>
-
-            <div class="course-card">
-                <img src="https://via.placeholder.com/300x200" alt="Course Image">
-                <h2>Course 2</h2>
-                <span class="subject">React.js</span>
-                <div class="rating">
-                    ★★★★★
-                </div>
-                <p class="author">Author: Jane Doe</p>
-            </div>
-
-            <div class="course-card">
-                <img src="https://via.placeholder.com/300x200" alt="Course Image">
-                <h2>Course Name</h2>
-                <span class="subject">Node.js</span>
-                <div class="rating">
-                    ★★★★☆
-                </div>
-                <p class="author">Author: Adam Jones</p>
-            </div>
-        </div>
+        </article>
+        <article class="topics">
+            <h1 class="topicsCount"></h1>
+            <section class="topics-details"></section>
+        </article>
     </main>
-
-    <footer class="footer">
-        <p>Developed with <ion-icon name="heart" class="heart-icon"></ion-icon> 2024</p>
+    <footer>
+        <h3>
+            Developed with <span><ion-icon name="heart"></ion-icon></span> 2023
+        </h3>
     </footer>
 
-    <script>
-        const darkModeToggle = document.getElementById('dark-mode-toggle');
-        darkModeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
+    <section class="favourites hidden">
+        <div class="fav-content">
+            <div class="fav-text">
+                <h3>My Favourite Topics</h3>
+            </div>
+            <div class="fav-topics"></div>
+        </div>
+    </section>
 
-            // Change the button text depending on the mode
-            if (document.body.classList.contains('dark-mode')) {
-                darkModeToggle.innerHTML = '<ion-icon name="sunny" class="icon"></ion-icon> Light Mode';
-            } else {
-                darkModeToggle.innerHTML = '<ion-icon name="moon" class="icon"></ion-icon> Dark Mode';
-            }
-        });
-    </script>
-
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
