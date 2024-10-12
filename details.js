@@ -10,18 +10,30 @@ const subTopics = document.querySelector(".sub-topics");
 // Dark mood functionality
 
 function setTheme(theme) {
-  return document.getElementById("theme").setAttribute("href", theme);
+  document.getElementById("theme").setAttribute("href", theme);
+  localStorage.setItem("theme", theme);
 }
 
-darkBtn.addEventListener("click", function (e) {
+darkBtn.addEventListener("click", function () {
   const theme = document.getElementById("theme").getAttribute("href");
   switch (theme) {
     case "light.css": {
-      return setTheme("dark.css");
+      setTheme("dark.css");
+      break;
     }
     case "dark.css": {
-      return setTheme("light.css");
+      setTheme("light.css");
+      break;
     }
+  }
+});
+
+window.addEventListener("load", function () {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    setTheme(savedTheme); // Apply the saved theme
+  } else {
+    setTheme("light.css"); // Default to light mode if no theme is saved
   }
 });
 
